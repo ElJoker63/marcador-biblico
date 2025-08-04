@@ -43,7 +43,7 @@ jobs:
     - name: Flet Build APK ${{ env.APP_NAME }}
       run: |
         flutter config --no-analytics
-        flet build apk --product "${{ env.APP_NAME }}" --org "com.aewaredev" --build-number "${{ env.BUILD_NUMBER }}" --build-version "${{ env.BUILD_VERSION }}" --include-packages flet_permission_handler --verbose
+        flet build apk --product "${{ env.APP_NAME }}" --org "com.aewaredev" --build-number "${{ env.BUILD_NUMBER }}" --build-version "${{ env.BUILD_VERSION }}" --verbose
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4.3.4
       with:
